@@ -45,15 +45,15 @@ const players = [
   {
     id: 5,
     name: 'Player that rejected searcher',
-    status: 'away',
+    status: 'looking',
     ping: 10,
     elo: 1000,
-    rejected: [1]
+    rejected: [0]
   },
   {
     id: 6,
     name: 'Player that was rejected by searcher',
-    status: 'away',
+    status: 'looking',
     ping: 10,
     elo: 1000,
     rejected: []
