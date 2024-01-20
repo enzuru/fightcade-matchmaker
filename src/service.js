@@ -1,4 +1,5 @@
-const ACCEPTABLE_ELO_DISTANCE = 300
+const LARGEST_ACCEPTABLE_ELO_DISTANCE = 300
+const LARGEST_ACCEPTABLE_PING = 50
 
 const findPlayer = (searchingPlayer, players = []) => {
   const filteredPlayers = players.filter(player =>
@@ -6,7 +7,9 @@ const findPlayer = (searchingPlayer, players = []) => {
       player.status === 'looking' &&
       !player.rejected.includes(searchingPlayer.id) &&
       !searchingPlayer.rejected.includes(player.id) &&
-      Math.abs(player.elo - searchingPlayer.elo) <= ACCEPTABLE_ELO_DISTANCE)
+      player.ping <= LARGEST_ACCEPTABLE_PING &&
+      Math.abs(player.elo - searchingPlayer.elo) <= LARGEST_ACCEPTABLE_ELO_DISTANCE)
+
   filteredPlayers.sort((a, b) => a.ping - b.ping)
   return filteredPlayers[0]
 }
