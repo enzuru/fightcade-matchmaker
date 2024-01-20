@@ -4,6 +4,7 @@
   "description": "A matchmaker for Fightcade",
   "main": "service.js",
   "scripts": {
+    "lint": "node_modules/standard/bin/cmd.cjs",
     "test": "mocha ./tests/"
   },
   "repository": {
@@ -20,10 +21,11 @@
     "express": "4.18.2"
   },
   "devDependencies": {
-    "mocha": "10.2.0"
+    "mocha": "10.2.0",
+    "standard": "17.1.0"
   },
   "standard": {
-    "globals":  [
+    "globals": [
       "describe",
       "context",
       "before",

@@ -25,5 +25,7 @@ jobs:
             ${{ runner.os }}-node-v${{ matrix.node }}-
       - name: Install Dependencies
         run: npm install
-      - name: Run All Node.js Tests
+      - name: Run linter
+        run: npm run lint
+      - name: Run unit tests
         run: npm run test

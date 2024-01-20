@@ -24,7 +24,7 @@ const players = [
     status: 'looking',
     ping: 10,
     elo: 500,
-    rejected: [],
+    rejected: []
   },
   {
     id: 3,
@@ -64,7 +64,7 @@ const players = [
     status: 'looking',
     ping: 10,
     elo: 1000,
-    rejected: [],
+    rejected: []
   }
 ]
 
